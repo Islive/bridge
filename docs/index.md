@@ -1,4 +1,4 @@
-Islive.io
+Islive.io / Bridge
 =========
 
 Running docs or example
@@ -11,7 +11,7 @@ If you wish to start your own documentation server, or view the example, simply 
 * #### Start server
     `cd docs && static`
     ```
-    User@battlestation ~/projects/nodejs/islive.io/docs (master)
+    User@battlestation ~/projects/nodejs/sdk/docs (master)
     $ static
     serving "." at http://127.0.0.1:8080
     ```

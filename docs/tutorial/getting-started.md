@@ -12,12 +12,13 @@ This means that by the end of this tutorial your application won't be beautiful,
 
 Installation
 ------------
-#### Require.js
+#### Assets
 * The islive.io SDK uses [RequireJS](http://requirejs.org/).
 * We'll be using [RequireJS with jquery](http://requirejs.org/docs/jquery.html).
 * jQuery will be loaded from a CDN to even more lower the boilerplate code.
 
-**Create your index.html file.**
+#### Create your index file
+Create a file named `index.html` with the following content:
 ```html
 <!doctype html>
 <html lang="en">
@@ -46,10 +47,13 @@ Installation
 
 ```
 
+#### Download the SDK
+[The sdk](https://github.com/Islive-io/sdk) is connects you to the islive.io fortress.
+To download the sdk run the following command:
 
+`git clone git@github.com:Islive-io/sdk.git`
 
-
-Download sdk, make sure you have permission to, set up package, download require.js, require dep.
+Setting up
 
 Showing performers
 -------------------

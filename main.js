@@ -16,7 +16,7 @@ define([], function () {
   return {
     load: function (name, req, onLoad, config) {
 
-      name = 'islive.io/lib/' + (name.replace(/^islive\.io\//, ''));
+      name = 'bridge/lib/' + (name.replace(/^islive\.io\//, ''));
 
       if (connectionEstablished) {
         return req([name], onLoad);
@@ -30,7 +30,7 @@ define([], function () {
 
       connectionEstablished = null;
 
-      req(['islive.io/lib/core/init'], function () {
+      req(['bridge/lib/core/init'], function () {
         connectionEstablished = true;
 
         return processQueue();
