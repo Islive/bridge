@@ -1,0 +1,14 @@
+{
+  "name": "islive.io/bridge",
+  "version": "0.0.1",
+  "description": "Islive.io bridge between front-end and fortress.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
