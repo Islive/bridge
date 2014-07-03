@@ -16,7 +16,7 @@ define([], function () {
   return {
     load: function (name, req, onLoad, config) {
 
-      name = 'bridge/lib/' + (name.replace(/^islive\.io\//, ''));
+      name = 'bridge/lib/' + (name.replace(/^bridge\//, ''));
 
       if (connectionEstablished) {
         return req([name], onLoad);
