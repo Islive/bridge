@@ -1,0 +1,14 @@
+{
+  "name": "draw-bridge",
+  "version": "0.0.0",
+  "description": "Islive.io SDK",
+  "main": "main.js",
+  "keywords": [
+    "islive",
+    "islive.io",
+    "require.js",
+    "sdk"
+  ],
+  "author": "RWOverdijk",
+  "license": "MIT"
+}

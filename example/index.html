@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Good day sir!</title>
+
+    <!-- RequireJS config. Will be applied as soon as RequireJS loads. -->
+    <script>
+        var require = {
+            "paths": {
+                "jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min"
+            }
+        };
+    </script>
+
+    <!-- RequireJS, with the "main" module set. -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js" data-main="app">
+    </script>
+</head>
+<body>
+
+<h1>Online performers</h1>
+<ul id="performers"></ul>
+
+</body>
+</html>
