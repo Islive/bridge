@@ -11,4 +11,6 @@ Get the [inbox](/api/user/message.md#inbox), [mark as read](/api/user/message.md
 Identity
 -----------------------------------
 With this module you can manage many aspects of the user.
-You can create a new user,
+You can create a new user, login and more.
+
+[View the API documentation](/api/user/identity.md)
