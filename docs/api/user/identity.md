@@ -14,6 +14,7 @@ Login a user.
 
 | Parameter | Type     | Description                                |
 | --------- | -------- | ------------------------------------------ |
+| role      | String   | The role authenticating for                |
 | username  | String   | The username                               |
 | password  | String   | The password                               |
 | callback  | Function | The callback that will be called when done |
@@ -22,7 +23,7 @@ Login a user.
 
 ```javascript
 define(['bridge!user/identity'], function(identity) {
-  identity.login('username@example.com', 'securePassword', function(result) {
+  identity.login('visitor', 'username@example.com', 'securePassword', function(result) {
     if (result.error) {
       // Authentication error
     }
