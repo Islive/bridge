@@ -23,8 +23,8 @@ Login a user.
 
 ```javascript
 define(['bridge!user/identity'], function(identity) {
-  identity.login('visitor', 'username@example.com', 'securePassword', function(result) {
-    if (result.error) {
+  identity.login('visitor', 'username@example.com', 'securePassword', function(error, result) {
+    if (error) {
       // Authentication error
     }
 
