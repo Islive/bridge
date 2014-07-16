@@ -51,7 +51,7 @@ define(['bridge!user/visitor'], function(visitor) {
   var username = 'Bob'
     , password = 'keeshond';
 
-  visitor.reply(username, password function(error, result) {
+  visitor.login(username, password, function(error, result) {
     if (error) {
       // Authentication error
     }
