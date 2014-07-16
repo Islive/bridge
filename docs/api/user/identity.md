@@ -121,7 +121,7 @@ define(['bridge!user/identity'], function(identity) {
 getUserId <small>- Added at v0.0.1</small>
 ------
 
-Get the user ID from a authenticated user.
+Get the user ID from the authenticated user.
 
 ### Parameters
 
@@ -149,7 +149,7 @@ define(['bridge!user/identity'], function(identity) {
 getIdentity <small>- Added at v0.0.1</small>
 ------
 
-Get the user's identity. Contains user information such as credit count.
+Get the user's identity. Contains user information and role.
 
 ### Parameters
 
@@ -164,7 +164,7 @@ Get the user's identity. Contains user information such as credit count.
 ```javascript
 define(['bridge!user/identity'], function(identity) {
 
-  identity.getIdentity(function(error, result) {
+  identity.getIdentity('visitor', function(error, result) {
     if (error) {
       // Error while fetching the identity
     }

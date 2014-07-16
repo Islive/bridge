@@ -115,11 +115,10 @@ This method figures out what the username of the person being talked to is.
 ```js
 define(['bridge!user/message'], function(message) {
 
-  var objMessage = {
-    // message object
-  };
+  // Inbox gotten from message.inbox();
+  var messageObject = inbox[0];
 
-  message.getParticipant(objMessage, function(error, result) {
+  message.getParticipant(messageObject, function(error, result) {
     if (error) {
       // Error while fetching name
     }
@@ -146,12 +145,11 @@ Mark a specific message as read.
 ```js
 define(['bridge!user/message'], function(message) {
 
-  message.markRead('53b2b258472c37b6250585e5', function(error, result) {
+  // inbox[0].id is the id of the first message
+  message.markRead(inbox[0].id, function(error) {
     if (error) {
       // Error while marking message as read
     }
-
-    var messageRead = result;
   });
 });
 ```
@@ -173,12 +171,11 @@ Mark all messages within a thread as read.
 ```js
 define(['bridge!user/message'], function(message) {
 
-  message.markAllRead('53b2b258472c37b6250585e5', function(error, result) {
+  // inbox[0].id is the id of the first message
+  message.markAllRead(inbox[0].id, function(error) {
     if (error) {
       // Error while marking all messages as read
     }
-
-    var messagesRead = result;
   });
 });
 ```
