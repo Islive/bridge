@@ -65,7 +65,7 @@ define(['bridge!user/visitor'], function(visitor) {
 
 getUserId <small>- Added at v0.0.1</small>
 -----
-Get the user id of a authenticated visitor
+Get the user id of the authenticated visitor.
 
 ### Parameters
 
@@ -117,7 +117,7 @@ define(['bridge!user/visitor'], function(visitor) {
 
 setUsername <small>- Added at v0.0.1</small>
 -----
-Set the username of a authenticated visitor
+Set the username of the authenticated visitor.
 
 ### Parameters
 
