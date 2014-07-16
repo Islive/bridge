@@ -14,3 +14,9 @@ With this module you can manage many aspects of the user.
 You can create a new user, login and more.
 
 [View the API documentation](/api/user/identity.md)
+
+Visitor
+-----------------------------------
+
+[View the API documentation](/api/user/visitor.md)
+

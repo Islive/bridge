@@ -11,6 +11,7 @@ create <small>- Added at v0.0.1</small>
 ------
 
 Start a new thread and send a message in it.
+Arguments can be supplied individually in specified order, or as an object with parameter names as key.
 
 ### Parameters
 
@@ -24,22 +25,25 @@ Start a new thread and send a message in it.
 ### Example
 ```js
 define(['bridge!user/message'], function(message) {
+
   var to = 'recipientUsername'
     , subject = 'Hello!'
     , body = 'How are you doing today?';
 
-  message.create(to, subject, body, function(result) {
-    if (result.error) {
+  message.create(to, subject, body, function(error, result) {
+    if (error) {
       // Sending message failed.
     }
+
+    var out = result;
   });
 });
 ```
 
-------
+-----
 
 getThread <small>- Added at v0.0.1</small>
----------
+-----
 Get a thread and the messages in it.
 
 ### Parameters
@@ -53,8 +57,8 @@ Get a thread and the messages in it.
 ```js
 define(['bridge!user/message'], function(message) {
 
-  message.getThread('53b2b258472c37b6250585e5', function(result) {
-    if (result.error) {
+  message.getThread('53b2b258472c37b6250585e5', function(error, result) {
+    if (error) {
       // Error while fetching thread
     }
 
@@ -83,12 +87,43 @@ define(['bridge!user/message'], function(message) {
 
   var body = 'I am fine thanks. You?';
 
-  message.reply('53b2b258472c37b6250585e5', body, function(result) {
-    if (result.error) {
+  message.reply('53b2b258472c37b6250585e5', body, function(error, result) {
+    if (error) {
       // Error while sending reply
     }
 
     var replied = result;
+  });
+});
+```
+
+-----
+
+getParticipant <small>- Added at v0.0.1</small>
+-----
+Get the name of the participant from a message object.
+This method figures out what the username of the person being talked to is.
+
+### Parameters
+
+| Parameter | Type          | Description                                |
+| --------- | ------------- | ------------------------------------------ |
+| message   | Object        | The object for the message.                |
+| callback  | Function      | The callback that will be called when done |
+
+### Example
+```js
+define(['bridge!user/message'], function(message) {
+
+  // Inbox gotten from message.inbox();
+  var messageObject = inbox[0];
+
+  message.getParticipant(messageObject, function(error, result) {
+    if (error) {
+      // Error while fetching name
+    }
+
+    var participant = result;
   });
 });
 ```
@@ -106,7 +141,20 @@ Mark a specific message as read.
 | message   | String        | The ID of the message                      |
 | callback  | Function      | The callback that will be called when done |
 
-------
+### Example
+```js
+define(['bridge!user/message'], function(message) {
+
+  // inbox[0].id is the id of the first message
+  message.markRead(inbox[0].id, function(error) {
+    if (error) {
+      // Error while marking message as read
+    }
+  });
+});
+```
+
+-----
 
 markAllRead <small>- Added at v0.0.1</small>
 -----
@@ -116,25 +164,23 @@ Mark all messages within a thread as read.
 
 | Parameter | Type          | Description                                |
 | --------- | ------------- | -------------------------------------------|
-| message   | String        | The ID of the thread                       |
+| thread    | String        | The ID of the thread                       |
 | callback  | Function      | The callback that will be called when done |
 
-------
+### Example
+```js
+define(['bridge!user/message'], function(message) {
 
-getParticipant <small>- Added at v0.0.1</small>
---------------
-Get the name of the participant from a message object.
-This method figures out what the username of the person being talked to is.
+  // inbox[0].id is the id of the first message
+  message.markAllRead(inbox[0].id, function(error) {
+    if (error) {
+      // Error while marking all messages as read
+    }
+  });
+});
+```
 
-### Parameters
-
-| Parameter | Type          | Description                                |
-| --------- | ------------- | ------------------------------------------ |
-| message   | Object        | The object for the message.                |
-| callback  | Function      | The callback that will be called when done |
-
-
-------
+-----
 
 inbox <small>- Added at v0.0.1</small>
 -----
@@ -151,8 +197,9 @@ This method returns a flattened set of messages to simplify rendering.
 ### Example
 ```js
 define(['bridge!user/message'], function(message) {
-  message.inbox(function(result) {
-    if (result.error) {
+
+  message.inbox(function(error, result) {
+    if (error) {
       // Fetching inbox failed.
     }
 

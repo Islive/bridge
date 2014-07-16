@@ -15,7 +15,7 @@ Login a user.
 | Parameter | Type     | Description                                |
 | --------- | -------- | ------------------------------------------ |
 | role      | String   | The role authenticating for                |
-| username  | String   | The username                               |
+| username  | String   | The username / email                       |
 | password  | String   | The password                               |
 | callback  | Function | The callback that will be called when done |
 
@@ -23,13 +23,16 @@ Login a user.
 
 ```javascript
 define(['bridge!user/identity'], function(identity) {
-  identity.login('visitor', 'username@example.com', 'securePassword', function(error, result) {
+
+  var username = 'Bob'
+    , password = 'keeshond';
+
+  identity.login('visitor', username, password, function(error, result) {
     if (error) {
       // Authentication error
     }
 
-    // Result is identity.
-    console.log(result.username);
+    var user = result;
   });
 });
 ```
@@ -51,6 +54,7 @@ Check if the current client has an identity.
 
 ```javascript
 define(['bridge!user/identity'], function(identity) {
+
   identity.hasIdentity(function(result) {
     if (result) {
       // User is logged in, and thus has an identity.
@@ -76,6 +80,7 @@ Destroy the client's identity.
 
 ```javascript
 define(['bridge!user/identity'], function(identity) {
+
   identity.logout(function(result) {
     // Logged out.
   });
@@ -100,12 +105,72 @@ Get the username from a user ID.
 
 ```javascript
 define(['bridge!user/identity'], function(identity) {
-  identity.getUsername('53b69e2d187c317122e0ddc7', function(result) {
-    if (result.error) {
-      // Getting the username failed.
+
+  identity.getUsername('53b69e2d187c317122e0ddc7', function(error, result) {
+    if (error) {
+      // Error while fetching the username
     }
 
-    // result is the username
+    var username = result;
   });
 });
 ```
+
+------
+
+getUserId <small>- Added at v0.0.1</small>
+------
+
+Get the user ID from the authenticated user.
+
+### Parameters
+
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| callback  | Function | The callback that will be called when done |
+
+### Example
+
+```javascript
+define(['bridge!user/identity'], function(identity) {
+
+  identity.getUserId(function(error, result) {
+    if (error) {
+      // Error while fetching the userId
+    }
+
+    var userId = result;
+  });
+});
+```
+
+------
+
+getIdentity <small>- Added at v0.0.1</small>
+------
+
+Get the user's identity. Contains user information and role.
+
+### Parameters
+
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| role      | String   | The role [visitor, performer]              |
+| callback  | Function | The callback that will be called when done |
+| force     | Boolean  | force update (don't use cached identity)   |
+
+### Example
+
+```javascript
+define(['bridge!user/identity'], function(identity) {
+
+  identity.getIdentity('visitor', function(error, result) {
+    if (error) {
+      // Error while fetching the identity
+    }
+
+    var userIndentity = result;
+  });
+});
+```
+
