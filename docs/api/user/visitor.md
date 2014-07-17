@@ -48,8 +48,6 @@ Check if the current client has an identity.
 ```javascript
 define(['bridge!user/visitor'], function(visitor) {
 
-  var role = 'performer';
-
   visitor.hasIdentity(function(error, result) {
     if (error) {
       // Error while fetching the identity
