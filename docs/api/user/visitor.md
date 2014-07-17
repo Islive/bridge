@@ -30,6 +30,36 @@ define(['bridge!user/visitor'], function(visitor) {
 });
 ```
 
+------
+
+hasIdentity <small>- Added at v0.0.1</small>
+------
+
+Check if the current client has an identity.
+
+### Parameters
+
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| callback  | Function | The callback that will be called when done |
+
+### Example
+
+```javascript
+define(['bridge!user/visitor'], function(visitor) {
+
+  var role = 'performer';
+
+  visitor.hasIdentity(function(error, result) {
+    if (error) {
+      // Error while fetching the identity
+    }
+
+    var userLoggedIn = result;
+  });
+});
+```
+
 -----
 
 login <small>- Added at v0.0.1</small>

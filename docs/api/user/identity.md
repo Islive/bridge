@@ -48,6 +48,7 @@ Check if the current client has an identity.
 
 | Parameter | Type     | Description                                |
 | --------- | -------- | ------------------------------------------ |
+| role      | String   | The role checking the identity for         |
 | callback  | Function | The callback that will be called when done |
 
 ### Example
@@ -55,10 +56,14 @@ Check if the current client has an identity.
 ```javascript
 define(['bridge!user/identity'], function(identity) {
 
-  identity.hasIdentity(function(result) {
-    if (result) {
-      // User is logged in, and thus has an identity.
+  var role = 'performer';
+
+  identity.hasIdentity(role, function(error, result) {
+    if (error) {
+      // Error while fetching the identity
     }
+
+    var userLoggedIn = result;
   });
 });
 ```
