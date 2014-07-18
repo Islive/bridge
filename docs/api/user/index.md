@@ -17,6 +17,8 @@ You can create a new user, login and more.
 
 Visitor
 -----------------------------------
+The visitor module allows you to work with the visitor identity.
+You can get the identity, login, get the amount of credits the user has and more.
 
 [View the API documentation](/api/user/visitor.md)
 
