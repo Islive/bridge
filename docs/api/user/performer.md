@@ -66,11 +66,11 @@ Login a performer.
 
 ### Parameters
 
-| Parameter | Type          | Description                                            |
-| --------- | ------------- | ------------------------------------------------------ |
-| username  | String        | The username / email                                   |
-| password  | String        | The password                                           |
-| callback  | Function      | The callback that will be called when done             |
+| Parameter | Type          | Description                                |
+| --------- | ------------- | -------------------------------------------|
+| username  | String        | The username / email                       |
+| password  | String        | The password                               |
+| callback  | Function      | The callback that will be called when done |
 
 ### Example
 ```js
@@ -97,9 +97,9 @@ Get the user id of the authenticated performer.
 
 ### Parameters
 
-| Parameter | Type          | Description                                            |
-| --------- | ------------- | ------------------------------------------------------ |
-| callback  | Function      | The callback that will be called when done             |
+| Parameter | Type          | Description                                |
+| --------- | ------------- | ------------------------------------------ |
+| callback  | Function      | The callback that will be called when done |
 
 ### Example
 ```js
