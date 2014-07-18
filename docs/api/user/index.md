@@ -8,12 +8,12 @@ Get the [inbox](/api/user/message.md#inbox), [mark as read](/api/user/message.md
 
 [View the API documentation](/api/user/message.md)
 
-Identity
+Performer
 -----------------------------------
-With this module you can manage many aspects of the user.
-You can create a new user, login and more.
+The performer module allows you to work with the performer identity.
+You can get the identity, login and more.
 
-[View the API documentation](/api/user/identity.md)
+[View the API documentation](/api/user/performer.md)
 
 Visitor
 -----------------------------------
@@ -21,4 +21,11 @@ The visitor module allows you to work with the visitor identity.
 You can get the identity, login, get the amount of credits the user has and more.
 
 [View the API documentation](/api/user/visitor.md)
+
+Identity
+-----------------------------------
+With this module you can manage many aspects of the user.
+You can create a new user, login and more.
+
+[View the API documentation](/api/user/identity.md)
 
