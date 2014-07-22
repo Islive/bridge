@@ -42,6 +42,33 @@ define(['bridge!user/message'], function(message) {
 
 -----
 
+getMessages <small>- Added at v0.0.1</small>
+-----
+Get the messages including the users and thread for a specific threadId.
+
+### Parameters
+
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| threadId  | String   | The ID of the thread                                   |
+| callback  | Function | The callback that will be called when fetching is done |
+
+### Example
+```js
+define(['bridge!user/message'], function(message) {
+
+  message.getMessages('53b2b258472c37b6250585e5', function(error, result) {
+    if (error) {
+      // Error while fetching messages
+    }
+
+    var messages = result;
+  });
+});
+```
+
+-----
+
 getThread <small>- Added at v0.0.1</small>
 -----
 Get a thread and the messages in it.
