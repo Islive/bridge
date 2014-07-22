@@ -214,7 +214,8 @@ define(['bridge!user/message'], function(message) {
     //     thread: "53b69e2d187c317122e0ddc7",
     //     body: "Some message",
     //     read: false,
-    //     direction: "out"
+    //     direction: "out",
+    //     participant: "anne80"
     //   }
     // ]
   });
