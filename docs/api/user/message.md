@@ -171,8 +171,8 @@ Mark all messages within a thread as read.
 ```js
 define(['bridge!user/message'], function(message) {
 
-  // inbox[0].id is the id of the first message
-  message.markAllRead(inbox[0].id, function(error) {
+  // inbox[0[.thread is the id of the thread
+  message.markAllRead(inbox[0].thread, function(error) {
     if (error) {
       // Error while marking all messages as read
     }
