@@ -85,9 +85,7 @@ define(['bridge!user/message'], function(message) {
 
   message.getUnreadCount(function(error, count) {
     if (error) {
-      console.error(error);
-
-      return;
+      // Error while fetching count
     }
 
     alert(count + ' unread messages!');
