@@ -19,7 +19,7 @@ Arguments can be supplied individually in specified order, or as an object with 
 | --------- | -------- | ------------------------------------------------------ |
 | to        | String   | The name of the recipient                              |
 | subject   | String   | The subject of the new thread                          |
-| message   | String   | The first message of the thread                        |
+| body      | String   | The first message of the thread                        |
 | callback  | Function | The callback that will be called when creation is done |
 
 ### Example
@@ -63,6 +63,32 @@ define(['bridge!user/message'], function(message) {
     }
 
     var messages = result;
+  });
+});
+```
+
+-----
+
+getUnreadCount <small>- Added at v0.0.1</small>
+-----
+Get the number of unread messages for the authenticated user.
+
+### Parameters
+
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| callback  | Function | The callback that will be called when fetching is done |
+
+### Example
+```js
+define(['bridge!user/message'], function(message) {
+
+  message.getUnreadCount(function(error, count) {
+    if (error) {
+      // Error while fetching count
+    }
+
+    alert(count + ' unread messages!');
   });
 });
 ```
