@@ -19,7 +19,7 @@ Arguments can be supplied individually in specified order, or as an object with 
 | --------- | -------- | ------------------------------------------------------ |
 | to        | String   | The name of the recipient                              |
 | subject   | String   | The subject of the new thread                          |
-| message   | String   | The first message of the thread                        |
+| body      | String   | The first message of the thread                        |
 | callback  | Function | The callback that will be called when creation is done |
 
 ### Example
