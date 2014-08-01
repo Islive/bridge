@@ -69,6 +69,34 @@ define(['bridge!user/message'], function(message) {
 
 -----
 
+getUnreadCount <small>- Added at v0.0.1</small>
+-----
+Get the number of unread messages for the authenticated user.
+
+### Parameters
+
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| callback  | Function | The callback that will be called when fetching is done |
+
+### Example
+```js
+define(['bridge!user/message'], function(message) {
+
+  message.getUnreadCount(function(error, count) {
+    if (error) {
+      console.error(error);
+
+      return;
+    }
+
+    alert(count + ' unread messages!');
+  });
+});
+```
+
+-----
+
 getThread <small>- Added at v0.0.1</small>
 -----
 Get a thread and the messages in it.
