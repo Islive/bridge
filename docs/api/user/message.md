@@ -51,13 +51,14 @@ Get the messages including the users and thread for a specific threadId.
 | Parameter | Type     | Description                                            |
 | --------- | -------- | ------------------------------------------------------ |
 | threadId  | String   | The ID of the thread                                   |
+| sort      | String   | Order messages, optional                               |
 | callback  | Function | The callback that will be called when fetching is done |
 
 ### Example
 ```js
 define(['bridge!user/message'], function(message) {
 
-  message.getMessages('53b2b258472c37b6250585e5', function(error, result) {
+  message.getMessages('53b2b258472c37b6250585e5', 'createdAt desc', function(error, result) {
     if (error) {
       // Error while fetching messages
     }
