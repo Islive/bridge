@@ -121,6 +121,8 @@ define(['bridge!user/message'], function(message) {
 });
 ```
 
+-----
+
 getThreadCount <small>- Added at v0.0.1</small>
 -----
 Get the total amount of threads
