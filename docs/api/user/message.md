@@ -121,6 +121,30 @@ define(['bridge!user/message'], function(message) {
 });
 ```
 
+getThreadCount <small>- Added at v0.0.1</small>
+-----
+Get the total amount of threads
+
+### Parameters
+
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| callback  | Function | The callback that will be called when fetching is done |
+
+### Example
+```js
+define(['bridge!user/message'], function(message) {
+
+  message.getThreadCount(function(error, result) {
+    if (error) {
+      // Error while fetching thread
+    }
+
+    var numberOfThreads = result;
+  });
+});
+```
+
 -----
 
 reply <small>- Added at v0.0.1</small>
