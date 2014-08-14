@@ -91,6 +91,39 @@ define(['bridge!user/visitor'], function(visitor) {
 
 -----
 
+loginByHash <small>- Added at v0.0.1</small>
+------
+
+Login a visitor by hash.
+
+### Parameters
+
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| email     | String   | The email address                          |
+| hash      | String   | The hash                                   |
+| callback  | Function | The callback that will be called when done |
+
+### Example
+
+```javascript
+define(['bridge!user/visitor'], function(visitor) {
+
+  var email = 'user@example.net'
+    , hash  = 'Jpe+MKFtRW7Hs1xfPKjUMQ';
+
+  visitor.loginByHash(email, hash, function(error, result) {
+    if (error) {
+      // Authentication error
+    }
+
+    var user = result;
+  });
+});
+```
+
+------
+
 getUserId <small>- Added at v0.0.1</small>
 -----
 Get the user id of the authenticated visitor.

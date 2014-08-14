@@ -39,6 +39,40 @@ define(['bridge!user/identity'], function(identity) {
 
 ------
 
+loginByHash <small>- Added at v0.0.1</small>
+------
+
+Login a user by hash.
+
+### Parameters
+
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| role      | String   | The role authenticating for                |
+| email     | String   | The email address                          |
+| hash      | String   | The hash                                   |
+| callback  | Function | The callback that will be called when done |
+
+### Example
+
+```javascript
+define(['bridge!user/identity'], function(identity) {
+
+  var email = 'user@example.net'
+    , hash  = 'Jpe+MKFtRW7Hs1xfPKjUMQ';
+
+  identity.loginByHash('visitor', email, hash, function(error, result) {
+    if (error) {
+      // Authentication error
+    }
+
+    var user = result;
+  });
+});
+```
+
+------
+
 hasIdentity <small>- Added at v0.0.1</small>
 ------
 
