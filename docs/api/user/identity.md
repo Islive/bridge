@@ -104,6 +104,37 @@ define(['bridge!user/identity'], function(identity) {
 
 ------
 
+usernameAvailable <small>- Added at v0.0.1</small>
+------
+
+Check if a specific username is available.
+
+### Parameters
+
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| username  | String   | The username                               |
+| callback  | Function | The callback that will be called when done |
+
+### Example
+
+```javascript
+define(['bridge!user/identity'], function(identity) {
+
+  var username = 'spongebob';
+
+  identity.usernameAvailable(username, function(error, available) {
+    if (error) {
+      // Handle error
+    }
+
+    var usernameAvailable = available;
+  });
+});
+```
+
+------
+
 logout <small>- Added at v0.0.1</small>
 ------
 
