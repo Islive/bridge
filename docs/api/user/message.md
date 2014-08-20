@@ -51,7 +51,7 @@ Get the messages including the users and thread for a specific threadId.
 | Parameter | Type     | Description                                            |
 | --------- | -------- | ------------------------------------------------------ |
 | threadId  | String   | The ID of the thread                                   |
-| [sort]      | String | Order messages                                         |
+| [sort]    | String   | Order messages                                         |
 | callback  | Function | The callback that will be called when fetching is done |
 
 ### Example
