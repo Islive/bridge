@@ -51,7 +51,7 @@ Get the messages including the users and thread for a specific threadId.
 | Parameter | Type     | Description                                            |
 | --------- | -------- | ------------------------------------------------------ |
 | threadId  | String   | The ID of the thread                                   |
-| sort      | String   | Order messages, optional                               |
+| [sort]    | String   | Order messages                                         |
 | callback  | Function | The callback that will be called when fetching is done |
 
 ### Example
@@ -270,15 +270,20 @@ This method returns a flattened set of messages to simplify rendering.
 
 ### Parameters
 
-| Parameter | Type          | Description                                |
-| --------- | ------------- | ------------------------------------------ |
-| callback  | Function      | The callback that will be called when done |
+| Parameter | Type          | Description                                 |
+| --------- | ------------- | ------------------------------------------- |
+| [page]    | Integer       | Current page with threads, defaults to 1    |
+| [limit]   | Integer       | Limit the amount of threads, defaults to 30 |
+| callback  | Function      | The callback that will be called when done  |
 
 ### Example
 ```js
 define(['bridge!user/message'], function(message) {
 
-  message.inbox(function(error, result) {
+  var page = 2
+    , limit = 15;
+
+  message.inbox(page, limit, function(error, result) {
     if (error) {
       // Fetching inbox failed.
     }
