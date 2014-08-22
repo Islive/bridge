@@ -10,5 +10,6 @@
   * [performer](/api/performer/index.md)
   * [payment](/api/payment/index.md)
   * # Core modules
+  * [core/subscribe](/api/core/subscribe.md)
   * [core/utilities](/api/core/utilities.md)
   * [core/transport](/api/core/transport.md)
