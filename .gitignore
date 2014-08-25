@@ -1,6 +1,7 @@
 node_modules
 bower_components
 .tmp
+docs
 dump.rdb
 lib-cov
 *.seed
