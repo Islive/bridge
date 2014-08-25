@@ -7,7 +7,7 @@ You can find the documentation in the `docs` directory. There's also an example 
 
 Installation
 ------------
-Simply `git clone` this repository to get started. Find out how by reading the `getting-started.md` tutorial in `docs/tutorials`.
+Simply `git clone` this repository to get started. Find out how by reading the `getting-started.md` tutorial in [the docs](http://islive.io/#!tutorial/getting-started.md).
 
 Getting started
 ---------------
