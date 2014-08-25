@@ -12,8 +12,8 @@ Simply `git clone` this repository to get started. Find out how by reading the `
 Getting started
 ---------------
 We've created a _getting started_ tutorial that will help you get familiar with the way this SDK was designed.
-You can find the tutorial in [docs/tutorial/getting-started.md](https://github.com/Islive-io/draw-bridge/blob/master/docs/tutorial/getting-started.md) or [here (click)](http://127.0.0.1:8080/#!tutorial/getting-started.md) when you have a running docs server.
+You can find the tutorial in [the docs](http://islive.io/#!tutorial/getting-started.md) or [here (click)](http://127.0.0.1:8080/#!tutorial/getting-started.md) if you have a locally running bridge-docs server.
 
 Running example
 -----------------------
-If you wish to view the example, simply [follow these instructions](/Islive-io/bridge/tree/master/example).
+If you wish to view the example, simply follow the instructions in the `example` directory.
