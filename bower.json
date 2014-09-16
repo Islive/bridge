@@ -1,0 +1,27 @@
+{
+  "name": "islive.io-bridge",
+  "version": "0.0.1",
+  "homepage": "http://islive-io.github.io/bridge",
+  "authors": [
+    "RWOverdijk <r.w.overdijk@gmail.com>"
+  ],
+  "description": "The draw-bridge that connects land to the fortress. Islive.io SDK.",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "fortress",
+    "islive",
+    "sdk",
+    "adult"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
