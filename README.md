@@ -1,7 +1,7 @@
 Bridge
 ======
 
-[![GitHub version](https://badge.fury.io/gh/Islive-io%2Fbridge.svg)](http://badge.fury.io/gh/Islive-io%2Fbridge) [![Bower version](https://badge.fury.io/bo/islive.io-bridge.svg)](http://badge.fury.io/bo/islive.io-bridge)
+[![GitHub version](https://badge.fury.io/gh/islive-io%2Fbridge.svg)](http://badge.fury.io/gh/islive-io%2Fbridge) [![Bower version](https://badge.fury.io/bo/islive.io-bridge.svg)](http://badge.fury.io/bo/islive.io-bridge)
 
 Documentation
 -------------
