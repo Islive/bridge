@@ -1,6 +1,10 @@
 {
   "name": "bridge",
+<<<<<<< HEAD
   "version": "0.4.0",
+=======
+  "version": "0.3.1",
+>>>>>>> 67c64a94d92f41583d369d9c262a3b401ff0ff46
   "description": "Islive.io SDK",
   "main": "main.js",
   "keywords": [
